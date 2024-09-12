@@ -14,15 +14,9 @@
  *= require_self
  */
 
- @import "bootstrap";
- @import "font-awesome";
- @import "app";
- body {
-   font-family: 'Open Sans', sans-serif;
- }
- #header {
-   background-color: #333;
-   color: white;
-   padding: 10px;
- }
- 
+ /* Apply to the body or the main container */
+body {
+    min-width: 243px;
+    overflow-x: hidden; /* Prevents horizontal scrollbars if resized too small */
+  }
+   

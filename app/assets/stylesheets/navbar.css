@@ -12,3 +12,87 @@
     font-size: 1.2rem;
     margin: 0 0.5rem;
 }
+@media (max-width: 700px) {
+    .icon-1{
+        display: none !important;
+    
+    }
+    
+}
+
+@media (max-width: 680px) {
+    .icon-2{
+        display: none;
+        
+    }
+    
+}
+@media (max-width: 645px) {
+    .icon-3 {
+        display: none;
+        
+    }   
+}
+
+@media (max-width: 490px) {
+    .icon-4 {
+        display: none;
+        
+    }   
+}
+@media (max-width: 455px) {
+    .icon-5 {
+        display: none;
+        
+    }   
+}
+@media (max-width: 420px) {
+    .icon-6 {
+        display: none;
+        
+    }   
+}
+
+
+@media (max-width: 375px) {   
+    .icon-7 {
+        display: none;
+        
+    }
+}
+
+@media (max-width:370px) {
+    .title-text{
+        display: none;  
+    }
+    
+}
+
+
+
+
+.nav-item.toggled {
+    display: block; /* Display each nav-item as a block */
+    background-color: #007bff; /* Change background color */
+    color: white;
+    animation: rotateAndMove 10s linear forwards; /* Apply rotation */
+  }
+  
+  /* Rotation animation */
+  @keyframes rotateAndMove {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(3600deg); /* 3600deg for 10 full rotations */
+    }
+  }
+  
+  /* Media query for screen sizes between 320px and 370px */
+  @media (max-width: 370px) and (min-width: 320px) {
+    .nav-item {
+      font-size: 14px;
+      padding: 8px;
+      margin-bottom: 10px; /* Add margin between items */
+    }
+  }

@@ -7,29 +7,26 @@
                     <i class="fas fa-bars"></i>
                 </button>
             <div class="d-flex align-items-center">
-                <a href="#" class="nav-icon"><i class="fas fa-home"></i></a>
-                <a href="#" class="nav-icon"><i class="fas fa-file-alt"></i></a>
-                <a href="#" class="nav-icon"><i class="fas fa-cog"></i></a>
-                <span class="text-white ms-2">
+                <a href="#" class="nav-icon icon-1"><i class="fas fa-home"></i></a>
+                <a href="#" class="nav-icon icon-2"><i class="fas fa-file-alt"></i></a>
+                <a href="#" class="nav-icon icon-3"><i class="fas fa-cog"></i></a>
+                <span class="text-white ms-2 title-text">
                 <% if controller_name.capitalize !="Home"%>
-                    <%= controller_name.capitalize %> - <%= action_name.capitalize %>
+                    <%= action_name.capitalize %>
                 <%end%>
                 </span>
             </div>
             <div class="ms-auto d-flex align-items-center">
-                <a href="#" class="nav-icon position-relative">
-                    <i class="fas fa-envelope"></i>
+                <a href="#" class="nav-icon position-relative icon-4">
+                    <i class="fas fa-envelope "></i>
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                         0
                     </span>
                 </a>
-                <a href="#" class="nav-icon"><i class="fas fa-microphone"></i></a>
-                <a href="#" class="nav-icon"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="nav-icon"><i class="fas fa-question-circle"></i></a>
-                <a href="#" class="nav-icon"><i class="fas fa-calendar-alt"></i></a>
-                <a href="#" class="nav-icon"><i class="far fa-copy"></i></a>
-                <img src="https://via.placeholder.com/32" alt="User" class="rounded-circle ms-2">
-                <a href="#" class="nav-icon"><i class="fas fa-qrcode"></i></a>
+                <a href="#" class="nav-icon icon-5"><i class="fas fa-calendar-alt"></i></a>
+                <a href="#" class="nav-icon icon-6"><i class="far fa-copy"></i></a>
+                <img src="https://via.placeholder.com/32" alt="User" class="rounded-circle ms-2 icon-7">
+               
             </div>
         </div>
     </nav>
