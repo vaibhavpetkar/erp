@@ -26,6 +26,8 @@ export default class extends Controller {
           e.preventDefault();
           const submenu = this.nextElementSibling;
           submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+          Turbolinks.visit(link.href); // or window.location.href = link.href;
+
         });
       });
     }

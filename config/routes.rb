@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
 
-   # Defines the root path route ("/")
-   root "home#show"
-end
+    # Defines the root path route ("/")
+    root "home#show"
+    get "company_master", to: "admin#company_master", as: :company_master
+  end
