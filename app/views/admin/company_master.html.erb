@@ -1,13 +1,14 @@
-
 <div class="container mt-4">
             <div class="form-container">
+
+<!--
                  
                      
 
                <!-- <div class="form-header">
                       Company Details
                 </div>
- -->
+ 
                 <form>
                 <div class="row mb-3">
                         <div class="col-md-6">
@@ -50,7 +51,134 @@
                             <input type="text" class="form-control" id="state">
                         </div>
                     </div>
-                    <!-- Add more form fields as needed -->
                 </form>
             </div>
         </div>
+-->
+
+
+<%= form_with(model: @company, local: true, class: 'needs-validation', novalidate: true) do |form| %>
+  <div class="container mt-4">
+    <h2>Company Master</h2>
+
+    <div class="mb-3">
+      <%= form.label :name, "Name of Company*", class: 'form-label' %>
+      <%= form.text_field :name, class: 'form-control', required: true %>
+    </div>
+
+    <div class="card mb-3">
+      <div class="card-header bg-info text-white">
+        Company Details
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <%= form.label :legal_entity_name, "Legal Entity Name", class: 'form-label' %>
+            <%= form.select :legal_entity_name, options_for_select([['Select Legal Entity', '']]), {}, { class: 'form-select' } %>
+          </div>
+          <div class="col-md-6 mb-3">
+            <%= form.label :company_code, "Company Code*", class: 'form-label' %>
+            <%= form.text_field :company_code, class: 'form-control', required: true %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <%= form.label :city, "City*", class: 'form-label' %>
+            <%= form.select :city, options_for_select([['Select City', '']]), {}, { class: 'form-select', required: true } %>
+          </div>
+          <div class="col-md-6 mb-3">
+            <%= form.label :communication_address, "Communication Address*", class: 'form-label' %>
+            <%= form.text_area :communication_address, class: 'form-control', required: true %>
+          </div>
+        </div>
+
+        <!-- Add more fields for Company Details section -->
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <%= form.label :currency, "Currency*", class: 'form-label' %>
+            <%= form.select :currency, options_for_select([['Select Currency', '']]), {}, { class: 'form-select', required: true } %>
+          </div>
+          <div class="col-md-6 mb-3">
+            <%= form.label :erp_go_live_date, "ERP Go-Live Date*", class: 'form-label' %>
+            <%= form.date_field :erp_go_live_date, class: 'form-control', required: true %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <%= form.label :books_beginning_from, "Books Beginning From*", class: 'form-label' %>
+            <%= form.date_field :books_beginning_from, class: 'form-control', required: true %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-3">
+      <div class="card-header bg-info text-white">
+        Tax Information
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <%= form.label :pan, "PAN / IT No", class: 'form-label' %>
+            <%= form.text_field :pan, class: 'form-control' %>
+          </div>
+          <div class="col-md-6 mb-3">
+            <%= form.label :gstin, "GSTIN No", class: 'form-label' %>
+            <%= form.text_field :gstin, class: 'form-control' %>
+          </div>
+        </div>
+
+        <!-- Add more fields for Tax Information section -->
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <%= form.label :company_status, "Company Status*", class: 'form-label' %>
+            <%= form.select :company_status, options_for_select([['<select>', '']]), {}, { class: 'form-select', required: true } %>
+          </div>
+          <div class="col-md-6 mb-3">
+            <%= form.label :total_shares, "Total No. of Shares", class: 'form-label' %>
+            <%= form.number_field :total_shares, class: 'form-control', value: 0 %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <%= form.label :company_address, "Company Address", class: 'form-label' %>
+            <%= form.text_area :company_address, class: 'form-control', placeholder: '....Pincode-' %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12 mb-3">
+            <%= form.label :remarks, "Remarks", class: 'form-label' %>
+            <%= form.text_area :remarks, class: 'form-control' %>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <%= form.label :min_go_live_date, "Min Go Live Date", class: 'form-label' %>
+            <%= form.date_field :min_go_live_date, class: 'form-control' %>
+          </div>
+          <div class="col-md-6 mb-3">
+            <%= form.label :status, "Status", class: 'form-label' %>
+            <div class="input-group">
+              <%= form.select :status, options_for_select([['Auto', '']]), {}, { class: 'form-select' } %>
+              <%= form.check_box :history, class: 'form-check-input ms-2' %>
+              <%= form.label :history, "HISTORY", class: 'form-check-label ms-1' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <%= form.submit "Submit", class: 'btn btn-primary' %>
+  </div>
+<% end %>
+
+</div>
+
+</div>
